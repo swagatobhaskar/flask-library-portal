@@ -7,12 +7,12 @@ main_bp = Blueprint('main', __name__)
 
 @main_bp.route("/")
 def hello():
-    return "<p>Hello, world!</p>"
-
+    return render_template('home.html')
+    
 @main_bp.route('/users')
 def get_all_users():
     users = User.query.all()
-    return render_template('users.html', users=users)
+    return render_template('user_pages/users.html', users=users)
 
 # @app.route('/genres')
 # def get_book_genres():

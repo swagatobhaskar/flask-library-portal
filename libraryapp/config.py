@@ -16,8 +16,7 @@ class DevConfig(Config):
     basedir = os.path.abspath(os.path.dirname(__file__))
     
     DEBUG = True
-    # SQLALCHEMY_DATABASE_URI = environ.get("SQLALCHEMY_DATABASE_URI_DEV")
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'socialapp.db')
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'libraryapp.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOAD_PATH = environ.get('UPLOAD_PATH')
 

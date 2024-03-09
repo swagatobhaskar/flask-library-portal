@@ -5,21 +5,21 @@ from sqlalchemy.sql import func
 
 from .extensions import db
 
-# class SexEnum(enum.Enum):
-#     male = 'Male'
-#     female = 'Female'
-#     other = 'Other'
+class SexEnum(enum.Enum):
+    male = 'Male'
+    female = 'Female'
+    other = 'Other'
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     f_name = db.Column(db.String(30), nullable=False)
     l_name = db.Column(db.String(30), nullable=False)
     email = db.Column(db.String(30), nullable=False)
-    # sex = db.Column(db.Enum(SexEnum), nullable=True)
+    sex = db.Column(db.Enum(SexEnum), nullable=True)
     subscription = db.relationship('Subscription', uselist=False, back_populates='user')
 
     def __repr__(self):
-        return f"<{self.f_name} {self.l_name}>"
+        return f"{self.f_name} {self.l_name} - {self.sex}"
 
 class Subscription(db.Model):
     id = db.Column(db.Integer, primary_key=True)
