@@ -3,30 +3,34 @@
     <head>
         <title>{% block title %}{% endblock %}</title>
     </head>
-    <body>
-        <div class="logo-section">
-            <img src="/static/flask-lib-logo.jpg" alt="logo" width="80%" height="auto">
+    <body style="background-color: bisque;">
+        <div class="main-area" style="margin: auto; width: 75%; border: 1px solid rgb(62, 45, 45); background-color: rgb(255, 255, 255);">
+            <div class="logo-section">
+                <img src="/static/flask-lib-logo.jpg" alt="logo" width="80%" height="auto">
+            </div>
+            <nav class="menubar" style="margin-top: 10px; height: 50px; background-color: rgb(48, 63, 160);">
+                <!-- navigation menu will go in here -->
+                <li 
+                    style="
+                    display: inline-flex;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    color: aliceblue;
+                    position: relative;
+                    left: 20%;
+                    ">
+                    <ul>Home</ul>
+                    <ul>Authors</ul>
+                    <ul>Categories</ul>
+                    <ul>Become a Member</ul>
+                    <ul>Contact Us</ul>
+                </li>
+            </nav>
+            <div style="margin: 10px;">
+                {% block content %}{% endblock %}
+            </div>
+            <footer style="position: relative; width: auto; top: 0%; height: 100px; background-color: rgb(48, 63, 160);">
+                <p>Footer section.</p>
+            </footer>
         </div>
-        <nav class="menubar" style="margin-top: 10px; height: 50px; background-color: rgb(63, 44, 184);">
-            <!-- navigation menu will go in here -->
-            <li 
-                style="
-                display: inline-flex;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                color: aliceblue;
-                ">
-                <ul>Home</ul>
-                <ul>Authors</ul>
-                <ul>Categories</ul>
-                <ul>Become a Member</ul>
-                <ul>Contact Us</ul>
-            </li>
-        </nav>
-        <div>
-            {% block content %}{% endblock %}
-        </div>
-        <footer>
-            <!--- The footer code will go here -->
-        </footer>
     </body>
 </html>
