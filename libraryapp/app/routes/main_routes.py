@@ -8,18 +8,8 @@ main_bp = Blueprint('main', __name__)
 @main_bp.route("/")
 def hello():
     return render_template('home.html')
-    
+
 @main_bp.route('/users')
 def get_all_users():
     users = User.query.all()
     return render_template('user_pages/users.html', users=users)
-
-# @app.route('/genres')
-# def get_book_genres():
-#     genres = Genre.query.all()
-#     return render_template('book_genres.html', genres=genres)    
-
-# @app.route('/authors')
-# def get_all_authors():
-#     authors = Author.query.all()
-#     return render_template('authors.html', authors=authors)

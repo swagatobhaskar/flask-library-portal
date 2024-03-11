@@ -4,8 +4,23 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
-        <nav>
+        <div class="logo-section">
+            <img src="/static/flask-lib-logo.jpg" alt="logo" width="80%" height="auto">
+        </div>
+        <nav class="menubar" style="margin-top: 10px; height: 50px; background-color: rgb(63, 44, 184);">
             <!-- navigation menu will go in here -->
+            <li 
+                style="
+                display: inline-flex;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: aliceblue;
+                ">
+                <ul>Home</ul>
+                <ul>Authors</ul>
+                <ul>Categories</ul>
+                <ul>Become a Member</ul>
+                <ul>Contact Us</ul>
+            </li>
         </nav>
         <div>
             {% block content %}{% endblock %}
