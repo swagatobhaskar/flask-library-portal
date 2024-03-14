@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/output.css')}}">
     </head>
-    <body style="background-color: bisque;">
-        <div class="main-area" style="margin: auto; width: 75%; border: 1px solid rgb(62, 45, 45); background-color: rgb(255, 255, 255);">
-            <div class="logo-section">
+    <body class="bg-red-300">
+        <div class="border-orange-500">
+            <div class="">
                 <img src="/static/flask-lib-logo.jpg" alt="logo" width="80%" height="auto">
             </div>
-            <nav class="menubar" style="margin-top: 10px; height: 50px; background-color: rgb(48, 63, 160);">
+            <nav>
                 <!-- navigation menu will go in here -->
-                <li 
-                    style="
-                    display: inline-flex;
-                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                    color: aliceblue;
-                    position: relative;
-                    left: 20%;
-                    ">
+                <li class="text-2xl flex">
                     <ul>Home</ul>
                     <ul>Authors</ul>
                     <ul>Categories</ul>
@@ -25,10 +22,10 @@
                     <ul>Contact Us</ul>
                 </li>
             </nav>
-            <div style="margin: 10px;">
+            <div>
                 {% block content %}{% endblock %}
             </div>
-            <footer style="position: relative; width: auto; top: 0%; height: 100px; background-color: rgb(48, 63, 160);">
+            <footer>
                 <p>Footer section.</p>
             </footer>
         </div>
