@@ -11,20 +11,22 @@
         <div class="">
             <img src="/static/flask-lib-logo.jpg" alt="logo" width="80%" height="auto" class="p-10">
         </div>
-        <nav class="border-4 border-sky-600 rounded-sm bg-sky-500/75 h-11 flex items-center">
+        <nav class="border-2 border-sky-700 bg-sky-500 h-11 flex items-center">
             <li class="text-lg flex font-medium tracking-wide mx-auto w-2/4 space-x-10 justify-center text-white">
-                <ul class="hover:font-semibold hover:bg-sky-500 p-0.5">Home</ul>
-                <ul>Authors</ul>
-                <ul>Categories</ul>
-                <ul>Become a Member</ul>
-                <ul>Contact Us</ul>
+                <ul class="hover:font-semibold hover:bg-sky-700 p-0.5">
+                    <a href="{{ url_for('main.home') }}">Home</a>
+                </ul>
+                <ul class="hover:font-semibold hover:bg-sky-700 p-0.5">Authors</ul>
+                <ul class="hover:font-semibold hover:bg-sky-700 p-0.5">Categories</ul>
+                <ul class="hover:font-semibold hover:bg-sky-700 p-0.5">Become a Member</ul>
+                <ul class="hover:font-semibold hover:bg-sky-700 p-0.5">Contact Us</ul>
             </li>
         </nav>
         <div class="mx-auto w-9/12 border-solid border-x-blue-900">
             {% block content %}{% endblock %}
         </div>
         <footer class="h-28 bg-sky-700 w-full absolute bottom-0">
-            <p>Footer section.</p>
+            <p>© Swagato's Library Portal. All rights reserved.</p>
         </footer>
     </body>
 </html>

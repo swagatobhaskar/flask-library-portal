@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
- <title>Simple Flask | Users</title>
-</head>
-<body>
- <div>
-  <p>Current users are:</p>
-  <ul>
-    {% for user in users %}
-        <li>{{user}}</li>
-    {% endfor %}
-  </ul>
- </div>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+  <h4>Registered Members Are:</h4>
+{% endblock %}
