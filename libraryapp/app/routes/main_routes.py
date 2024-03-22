@@ -14,3 +14,7 @@ def home():
 def get_all_users():
     users = User.query.all()
     return render_template('user_pages/users.html', users=users)
+
+@main_bp.route('/contact')
+def contact():
+    return render_template('contact.html')
