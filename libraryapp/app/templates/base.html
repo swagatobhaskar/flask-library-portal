@@ -7,7 +7,7 @@
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="{{url_for('static', filename='css/output.css')}}">
     </head>
-    <body>
+    <body class="relative">
         <div class="w-9/12 mx-auto">
             <a href="{{ url_for('main.home') }}">
                 <img src="/static/flask-libapp-logo-2.png" alt="logo" width="300" height="120" class="ml-5 p-1">
@@ -20,7 +20,7 @@
             {% block content %}{% endblock %}
         </div>
         <footer class="h-20 bg-sky-700 w-full absolute bottom-0">
-            <p class="text-white text-lg">© Swagato's Library Portal. All rights reserved.</p>
+            {% include('footer.html') %}
         </footer>
     </body>
 </html>

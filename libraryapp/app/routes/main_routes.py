@@ -17,4 +17,4 @@ def get_all_users():
 
 @main_bp.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact_us.html')
