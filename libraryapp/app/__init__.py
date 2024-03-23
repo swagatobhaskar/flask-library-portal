@@ -2,6 +2,7 @@ from flask import Flask
 from flask_migrate import Migrate
 
 from .routes.main_routes import main_bp
+from .routes.author_roots import author_bp
 from .extensions import db
 from config import DevConfig
 
@@ -21,4 +22,5 @@ def create_app():
     return app
 
 def reg_blueprints(app):
-    app.register_blueprint(main_bp)
+    app.register_blueprint(main_bp) # default arg: name='main'
+    app.register_blueprint(author_bp, name='author', url_prefix="/author")
