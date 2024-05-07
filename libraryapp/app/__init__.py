@@ -24,3 +24,4 @@ def create_app():
 def reg_blueprints(app):
     app.register_blueprint(main_bp) # default arg: name='main'
     app.register_blueprint(author_bp, name='author', url_prefix="/author")
+    
